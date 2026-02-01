@@ -1,266 +1,178 @@
 <!-- ========================================================= -->
-<!-- VERSION 1 – FULL DETAILED SALESFORCE PORTFOLIO WEBSITE     -->
-<!-- Author: Hitesh Nimje                                      -->
-<!-- Purpose: Personal Portfolio showcasing Salesforce skills  -->
+<!-- HITESH NIMJE – SALESFORCE PORTFOLIO WEBSITE              -->
+<!-- Version: Professional / Interview-Ready                 -->
 <!-- ========================================================= -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- ===================================================== -->
-  <!-- External Custom CSS File                              -->
-  <!-- Contains reusable styles across the website           -->
-  <!-- ===================================================== -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- ===================================================== -->
-  <!-- Meta Tags                                             -->
-  <!-- charset: Ensures proper text encoding                 -->
-  <!-- viewport: Makes website responsive on all devices     -->
-  <!-- ===================================================== -->
+  <!-- ================= SEO & META ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Senior Salesforce Administrator | 7x Certified | 9+ Years Experience. Salesforce Sandbox, DevOps, CI/CD, Copado, nCino, and CRM Transformation.">
 
-  <!-- ===================================================== -->
-  <!-- Page Title (Shown in Browser Tab)                     -->
-  <!-- ===================================================== -->
   <title>Hitesh Nimje | Salesforce Portfolio</title>
 
-  <!-- ===================================================== -->
-  <!-- Bootstrap CSS CDN                                     -->
-  <!-- Used for layout, grid system, navbar, dropdown, etc.  -->
-  <!-- ===================================================== -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- ================= FAVICON ================= -->
+  <link rel="icon" href="favicon.png" type="image/png">
 
-  <!-- ===================================================== -->
-  <!-- Bootstrap Icons CDN                                   -->
-  <!-- Used for icons (if required in future)                -->
-  <!-- ===================================================== -->
+  <!-- ================= CSS ================= -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- ===================================================== -->
-  <!-- Inline Custom CSS                                     -->
-  <!-- Used for quick UI styling specific to this page       -->
-  <!-- ===================================================== -->
+  <!-- ================= CUSTOM STYLES ================= -->
   <style>
-
-    /* Global font and smooth scrolling */
     body {
       font-family: 'Segoe UI', sans-serif;
       scroll-behavior: smooth;
     }
 
-    /* Navbar background color */
     nav {
       background: #002B5B;
     }
 
-    /* Navbar links styling (excluding dropdown items) */
     .navbar-nav .nav-link {
-      color: black !important;
+      color: white !important;
       margin: 0 10px;
     }
 
-    /* Header / Hero section styling */
     header {
       background: linear-gradient(120deg, #002B5B, #004080);
       color: white;
-      padding: 100px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
 
-    /* Header main name text */
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
+    header img {
+      width: 150px;
+      height: 150px;
+      border: 5px solid #ff7f50;
     }
 
-    /* Header subtitle text */
-    header p {
-      font-size: 1.2rem;
-      margin: 10px 0 20px;
-    }
-
-    /* Custom button styling (used if needed) */
-    .btn-custom {
-      background: #ff7f50;
-      color: white;
-      font-weight: bold;
-      border-radius: 25px;
-      padding: 10px 20px;
-    }
-
-    /* Padding for all sections */
-    section {
-      padding: 60px 20px;
-    }
-
-    /* Section headings */
     h2 {
       color: #002B5B;
       font-weight: 600;
     }
 
-    /* Card-style layout for future enhancements */
-    .project-card {
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
+    section {
+      padding: 70px 20px;
     }
 
-    /* Footer styling */
+    .btn-custom {
+      background: #ff7f50;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 600;
+    }
+
     footer {
       background: #002B5B;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
     }
   </style>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
 
-<!-- ===================================================== -->
-<!-- NAVIGATION BAR                                        -->
-<!-- Fixed at top, responsive, includes dropdown menu      -->
-<!-- ===================================================== -->
-<nav class="navbar navbar-expand-lg fixed-top">
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
 
-  <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold">Hitesh Nimje</a>
 
-    <!-- Brand / Logo -->
-    <a class="navbar-brand text-white fw-bold">Hitesh Nimje</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Responsive Toggle Button (for mobile view) -->
-    <button class="navbar-toggler" type="button"
-      data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
 
-    <!-- Collapsible Navbar Content -->
-    <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Salesforce Topics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Salesforce Topics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="topics/sandbox.html">Salesforce Sandbox</a></li>
+              <li><a class="dropdown-item" href="topics/copado.html">Copado & CI/CD</a></li>
+              <li><a class="dropdown-item" href="topics/ncino.html">nCino (FinTech)</a></li>
+              <li><a class="dropdown-item" href="topics/transformation.html">Salesforce Transformation</a></li>
+            </ul>
+          </li>
 
-      <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
-        <!-- ============================= -->
-        <!-- Salesforce Topics Dropdown   -->
-        <!-- ============================= -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             id="salesforceDropdown"
-             role="button"
-             data-bs-toggle="dropdown">
-            Salesforce Topics
-          </a>
-
-          <!-- Dropdown Menu -->
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="topics/sandbox.html">Salesforce Sandbox</a></li>
-            <li><a class="dropdown-item" href="topics/Copado.html">Copado for Deployment</a></li>
-            <li><a class="dropdown-item" href="topics/nCino.html">nCino for FinTech</a></li>
-            <li><a class="dropdown-item" href="topics/Sf Transformation.html">Salesforce Transformation</a></li>
-          </ul>
-        </li>
-
-        <!-- Experience Section Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-
-        <!-- Projects Section Link -->
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- ===================================================== -->
-<!-- HEADER / HERO SECTION                                 -->
-<!-- Displays photo, name and professional summary         -->
-<!-- ===================================================== -->
-<header>
-  <img src="Myphoto Circle.png"
-       class="rounded-circle mb-3"
-       style="width:150px;height:150px;border:5px solid #ff7f50;">
-  <h1>Hitesh Nimje</h1>
-  <p>Senior Salesforce Administrator | 7X Certified | 9+ Years Experience</p>
-</header>
+  <!-- ================= HERO ================= -->
+  <header>
+    <img src="Myphoto Circle.png" class="rounded-circle mb-3">
+    <h1>Hitesh Nimje</h1>
+    <p>Senior Salesforce Administrator | 7X Certified | 9+ Years Experience</p>
 
-<!-- ===================================================== -->
-<!-- ABOUT ME SECTION                                      -->
-<!-- ===================================================== -->
-<section id="about" class="container">
-  <h2>About Me</h2>
-  <p>
-    Salesforce Professional with 9+ years of expertise in the Salesforce ecosystem,
-    focused on scalable solutions, automation, and business optimization.
-  </p>
-</section>
+    <!-- Call to Action Buttons -->
+    <a href="Hitesh_Nimje_Resume.pdf" class="btn btn-custom me-2">Download Resume</a>
+    <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+  </header>
 
-<!-- ===================================================== -->
-<!-- SKILLS SECTION                                        -->
-<!-- ===================================================== -->
-<section id="skills" class="bg-light">
-  <div class="container">
-    <h2>Core Competencies</h2>
-    <ul>
-      <li>Sales Cloud, Service Cloud, FSL, CPQ</li>
-      <li>User Management, Security, Permission Sets</li>
-      <li>Flows, Automation, Approval Processes</li>
-      <li>Data Migration & Deployment Tools</li>
-      <li>Integrations & Agile Tools</li>
-    </ul>
-  </div>
-</section>
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="bg-light">
+    <div class="container">
+      <h2>Core Skills</h2>
 
-<!-- ===================================================== -->
-<!-- EXPERIENCE SECTION                                    -->
-<!-- ===================================================== -->
-<section id="experience" class="container">
-  <h2>Experience</h2>
-  <!-- Experience blocks listed here -->
-</section>
+      <div class="mb-2">Salesforce Administration</div>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-success" style="width:95%">95%</div>
+      </div>
 
-<!-- ===================================================== -->
-<!-- PROJECTS SECTION                                      -->
-<!-- ===================================================== -->
-<section id="projects" class="bg-light">
-  <div class="container">
-    <h2>Key Projects</h2>
-  </div>
-</section>
+      <div class="mb-2">Flows & Automation</div>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-info" style="width:90%">90%</div>
+      </div>
 
-<!-- ===================================================== -->
-<!-- CERTIFICATIONS SECTION                                -->
-<!-- ===================================================== -->
-<section id="certifications" class="container">
-  <h2>Certifications</h2>
-</section>
+      <div class="mb-2">CI/CD & DevOps</div>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-warning" style="width:85%">85%</div>
+      </div>
+    </div>
+  </section>
 
-<!-- ===================================================== -->
-<!-- EDUCATION SECTION                                     -->
-<!-- ===================================================== -->
-<section id="education" class="container">
-  <h2>Education</h2>
-</section>
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="container">
+    <h2>Experience</h2>
 
-<!-- ===================================================== -->
-<!-- FOOTER                                                -->
-<!-- ===================================================== -->
-<footer>
-  © 2026 Hitesh Nimje
-</footer>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5>Senior Salesforce Admin – Vitim Cloud</h5>
+        <p class="text-muted">2023 – Present</p>
+        <ul>
+          <li>Salesforce administration, governance, and integrations</li>
+          <li>Email-to-Case, dashboards, automation, audits</li>
+        </ul>
+      </div>
+    </div>
 
-<!-- ===================================================== -->
-<!-- Bootstrap JavaScript Bundle                           -->
-<!-- Required for dropdowns, modals, collapse, etc.        -->
-<!-- ===================================================== -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5>Senior Salesforce Admin – SA Tech</h5>
+        <p class="text-muted">2022 – 2023</p>
+        <ul>
+          <li>Permission set migration & CI/CD leadership</li>
+          <li>Business analysis & Agile ceremonies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-</body>
-</html>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" c
